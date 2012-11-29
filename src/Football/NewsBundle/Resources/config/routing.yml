@@ -1,0 +1,7 @@
+football_news_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: FootballNewsBundle:Default:hello }
+
+_welcome:
+  pattern:  /
+  defaults: { _controller: FootballNewsBundle:Default:index }

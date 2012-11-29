@@ -1,0 +1,11 @@
+# IDE files to ignore
+/.idea/
+
+# Symfony files to ignore
+/web/bundles/
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/vendor/
+/app/config/parameters.yml
+/composer.phar
