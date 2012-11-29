@@ -3,9 +3,9 @@
 {% block title %}Football 3x3{% endblock %}
 
 {% block stylesheets %}
-    {% stylesheets filter="cssrewrite"
-    'bundles/footballnews/css/base.css'
-    output='css/dist.css' %}
+    {% stylesheets filter="lessphp"
+    'bundles/footballnews/css/base.less'
+    output='bundles/footballnews/css/base.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 {% endblock %}
@@ -13,16 +13,16 @@
 {% block body %}
     <section id="wrapper">
         <header id="header">
+            <ul class="social-links">
+                <li><a class="vk" href="#">Vkontakte</a></li>
+                <li><a class="fb" href="#">Facebook</a></li>
+            </ul>
+
             <div class="logo">
                 <a href="{{ path('_welcome') }}">
                     <img src="http://football3x3.kiev.ua/wp-content/themes/football/img/logo.png" width="200" height="200" alt="Football 3x3 Logo" />
                 </a>
             </div>
-
-            <ul class="social-links">
-                <li><a class="vk" href="#">Vkontakte</a></li>
-                <li><a class="fb" href="#">Facebook</a></li>
-            </ul>
         </header>
 
         {% block navigation %}
@@ -45,7 +45,7 @@
 
         <div id="footer">
             {% block footer %}
-                Symfony2 blog tutorial - created by <a href="https://github.com/dsyph3r">dsyph3r</a>
+                Website created by <a href="mailto:Oleg Voloshin <vololeg93@gmail.com>">Oleg Voloshin</a> &copy; 2012
             {% endblock %}
         </div>
     </section>
