@@ -20,7 +20,7 @@
 
             <div class="logo">
                 <a href="{{ path('_welcome') }}">
-                    <img src="http://football3x3.kiev.ua/wp-content/themes/football/img/logo.png" width="200" height="200" alt="Football 3x3 Logo" />
+                    <img src="{{ asset('bundles/footballnews/images/football3x3-logo.png') }}" width="139" height="171" alt="Football 3x3 Logo" />
                 </a>
             </div>
         </header>
@@ -28,18 +28,29 @@
         {% block navigation %}
             <nav>
                 <ul class="navigation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="active"><a href="{{ path('_welcome') }}">Головна</a></li>
+                    <li><a href="#">Про проект</a></li>
+                    <li><a href="#">Події</a></li>
+                    <li><a href="#">Учасники</a></li>
+                    <li><a href="#">Галерея</a>
+                        <ul>
+                            <li><a href="#">Фото</a></li>
+                            <li class="last"><a href="#">Відео</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Партнери</a></li>
+                    <li><a href="#">Преса</a></li>
+                    <li><a href="#">Контакти</a></li>
+                    <li class="last"><a href="#">Документи</a></li>
                 </ul>
             </nav>
         {% endblock %}
 
-        <section class="main-col">
+        <section id="content">
             {% block content %}{% endblock %}
         </section>
 
-        <aside class="sidebar">
+        <aside id="sidebar">
             {% block sidebar %}{% endblock %}
         </aside>
 

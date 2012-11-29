@@ -1,21 +1,59 @@
+/* import less */
+
+@import 'helper.less';
+
+/* variables */
+
+@link-color: #418ac9;
+@link-hover: #b7d3eb;
+
+/* body */
+
 body {
   margin: 0;
   padding: 0;
+  font: 13px Arial, Helvetica, Tahoma, Verdana;
 }
+
+/* common styles */
+
+a {
+  color: @link-color;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* wrapper */
 
 #wrapper {
   width: 960px;
   margin: 0 auto;
-  border: 1px solid #ccc;
+}
+
+/* header */
+
+#header {
+  position: relative;
+  margin: 5px 0 0 0;
+}
+
+/* logotype */
+
+.logo {
+  margin: 0 20px;
 }
 
 /* social icons */
 
 ul.social-links {
-  margin: 100px 100px 0 50px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  margin: 0;
   padding: 0;
   list-style: none;
-  float: right;
   overflow: auto;
 
   li {
@@ -38,4 +76,105 @@ ul.social-links {
       }
     }
   }
+}
+
+/* navigation */
+
+ul.navigation {
+  @nav-bg: #418ac9;
+  @nav-height: 26px;
+  @link-color: #fff;
+  @hover-bg: #b7d3eb;
+
+  margin: 5px 0 0 0;
+  padding: 5px;
+  height: @nav-height;
+  list-style: none;
+  background: @nav-bg;
+
+  li {
+    float: left;
+    margin-right: 5px;
+    position: relative;
+
+    /* sub navigation */
+
+    ul {
+      position: absolute;
+      top: @nav-height;
+      display: none;
+      margin: 0;
+      padding: 0;
+      background: @nav-bg;
+      list-style: none;
+      overflow: auto;
+      padding: 5px;
+
+      li {
+        float: none;
+        margin: 0 0 5px 0;
+        padding: 0;
+
+        &.last {
+          margin: 0;
+        }
+      }
+    }
+
+    &.last {
+      margin: 0;
+    }
+
+    &:hover {
+      ul {
+        display: block;
+      }
+    }
+
+    .hover() {
+      background: @hover-bg;
+      .text-shadow(0 1px 3px #000);
+    }
+
+    a {
+      display: block;
+      margin: 0;
+      padding: 5px 15px;
+      text-decoration: none;
+      color: @link-color;
+
+      &:hover {
+        .hover();
+      }
+    }
+
+    &.active {
+      a {
+        .hover();
+      }
+    }
+  }
+}
+
+/* content */
+
+#content {
+  margin-top: 5px;
+  padding: 0 10px;
+}
+
+/* sidebar */
+
+#sidebar {
+
+}
+
+/* footer */
+
+#footer {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  color: #555;
 }
