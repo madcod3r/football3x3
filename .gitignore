@@ -1,6 +1,9 @@
 # IDE files to ignore
 /.idea/
 
+# other files
+*.lock
+
 # Symfony files to ignore
 /web/bundles/
 /app/bootstrap*
