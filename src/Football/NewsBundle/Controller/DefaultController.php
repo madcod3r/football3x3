@@ -15,4 +15,9 @@ class DefaultController extends Controller
 	{
 		return $this->render('FootballNewsBundle:Default:hello.html.twig', array('name' => $name));
 	}
+
+	public function navigationAction()
+	{
+		return $this->render('FootballNewsBundle:Default:navigation.html.twig');
+	}
 }
