@@ -15,6 +15,13 @@ body {
   font: 13px Arial, Helvetica, Tahoma, Verdana;
 }
 
+img {
+  margin: 0;
+  paddong: 0;
+  outline: 0;
+  border: 0;
+}
+
 /* common styles */
 
 a {
@@ -82,47 +89,43 @@ ul.social-links {
 
 ul.navigation {
   @nav-bg: #418ac9;
-  @nav-height: 26px;
+  @nav-height: 36px;
   @link-color: #fff;
   @hover-bg: #b7d3eb;
 
   margin: 5px 0 0 0;
-  padding: 5px;
+  padding: 0 3px;
   height: @nav-height;
   list-style: none;
   background: @nav-bg;
 
+  .gradient(@nav-bg, darken(@nav-bg, 10%));
+  .border-radius(2px);
+
   li {
     float: left;
-    margin-right: 5px;
+    padding: 5px 2px;
     position: relative;
 
     /* sub navigation */
 
     ul {
+      z-index: 2;
       position: absolute;
       top: @nav-height;
       display: none;
       margin: 0;
-      padding: 0;
-      background: @nav-bg;
+      padding: 3px 0;
+      background: darken(@nav-bg, 10%);
+      border-top: 1px solid darken(@nav-bg, 13%);
       list-style: none;
       overflow: auto;
-      padding: 5px;
 
       li {
         float: none;
-        margin: 0 0 5px 0;
-        padding: 0;
-
-        &.last {
-          margin: 0;
-        }
+        margin: 0;
+        padding: 2px 5px;
       }
-    }
-
-    &.last {
-      margin: 0;
     }
 
     &:hover {
@@ -133,6 +136,7 @@ ul.navigation {
 
     .hover() {
       background: @hover-bg;
+      .gradient(@hover-bg, darken(@hover-bg, 10%));
       .text-shadow(0 1px 3px #000);
     }
 
@@ -162,6 +166,100 @@ ul.navigation {
   margin-top: 5px;
 }
 
+/* .slider */
+.slider {
+  @slider-height: 400px;
+  @slider-bg: #418ac9;
+
+  @slide-width: 650px;
+  @slides-width: 300px;
+
+  height: @slider-height;
+  overflow: hidden;
+  background: @slider-bg;
+  border: 5px solid @slider-bg;
+  margin-top: 10px;
+
+  .border-radius(2px);
+
+  .slides {
+    height: @slider-height;
+    overflow: auto;
+    width: @slides-width;
+    float: right;
+
+  /* Let's get this party started */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+  /* Track */
+    &::-webkit-scrollbar-track {
+      .box-shadow(inset 0 0 6px rgba(0,0,0,0.3));
+      .border-radius(5px);
+    }
+
+  /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: rgba(183, 211, 235, 0.8);
+      .border-radius(5px);
+      .box-shadow(inset 0 0 2px rgba(0,0,0,0.9));
+    }
+
+    &::-webkit-scrollbar-thumb:window-inactive {
+      background: #ccc;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        background: #eaeaea;
+        margin: 5px;
+        margin-top: 0;
+        padding: 5px;
+
+        cursor: pointer;
+        overflow: auto;
+        .border-radius(5px);
+
+        &:hover, &.active {
+          background: #555;
+          color: #fff;
+        }
+
+        img {
+          float: left;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .slide {
+    overflow: hidden;
+    width: @slide-width;
+    position: relative;
+
+    .slide-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+
+      padding: 10px 20px;
+
+      .opacity(0.8);
+      background: #333;
+      color: #fff;
+
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+}
+
 /* sidebar */
 
 #sidebar {
@@ -171,7 +269,7 @@ ul.navigation {
 /* footer */
 
 #footer {
-  margin-top: 5px;
+  margin-top: 25px;
   padding-top: 5px;
   border-top: 1px solid #ccc;
   text-align: center;
