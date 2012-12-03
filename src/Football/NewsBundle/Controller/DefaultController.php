@@ -8,7 +8,11 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('FootballNewsBundle:Default:index.html.twig');
+	    $repository = $this->getDoctrine()->getRepository('FootballNewsBundle:Event');
+
+	    $events = $repository->findAll();
+
+        return $this->render('FootballNewsBundle:Default:index.html.twig', array('events' => $events));
     }
 
 	public function helloAction($name)
