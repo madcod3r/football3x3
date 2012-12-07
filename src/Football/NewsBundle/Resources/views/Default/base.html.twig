@@ -10,6 +10,12 @@
     {% endstylesheets %}
 {% endblock %}
 
+{% block javascripts %}
+    {% javascripts '@FootballNewsBundle/Resources/public/js/jquery-1.8.3.min.js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
 {% block body %}
     <section id="wrapper">
         <header id="header">
