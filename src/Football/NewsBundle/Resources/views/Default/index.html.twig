@@ -15,26 +15,12 @@
     <div class="slider">
         <div class="slides">
             <ul>
+                {% for event in events %}
                 <li class="active">
-                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/%D0%90%D1%84%D0%B8%D1%88%D0%B0.jpg" width="100" height="75" />
-                    <b class="small-caption">Перший чемпіонат Києва з футболу 3х3 / 09.02.2012</b>
+                    <img class="small-img" src="{{ event.image }}" width="100" height="75" />
+                    <b class="small-caption">{{ event.name }}</b>
                 </li>
-                <li>
-                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/x_fd85d5ae.jpg" width="100" height="75" />
-                    <b class="small-caption">Kyiv Urban Football Fest 2011 / 01.11.2011</b>
-                </li>
-                <li>
-                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/media-igry-516.jpg" width="100" height="75" />
-                    <b class="small-caption">Перший жіночий кубок з футболу 3х3 «Медіа-ігри» 2011 / 05.11.2011</b>
-                </li>
-                <li>
-                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/IMG_10423.jpg" width="100" height="75" />
-                    <b class="small-caption">Асоціація дитячого та молодіжного футболу 3х3 взяла участь у відкритті компоненту всеукраїнського соціального проекту «Давай разом!» – «Чесна гра!» / 03.11.2011</b>
-                </li>
-                <li>
-                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b class="small-caption">Junior Football Cup 3×3 2010 / 07.04.2010</b>
-                </li>
+                {% endfor %}
             </ul>
         </div>
         <div class="big-slide">
@@ -42,11 +28,4 @@
             <span class="big-caption"></span>
         </div>
     </div>
-
-    <!--{% for event in events %}
-        <li>
-            <a href="#{{ event.id }}">{{ event.name }} ({{ event.description }})</a><br />
-            <img src="{{ event.image }}" />
-        </li>
-    {% endfor %}-->
 {% endblock %}
