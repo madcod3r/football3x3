@@ -1,81 +1,45 @@
 {% extends 'FootballNewsBundle:Default:base.html.twig' %}
 
+{% block javascripts %}
+    {% javascripts
+    '@FootballNewsBundle/Resources/public/js/jquery-1.8.3.min.js'
+    '@FootballNewsBundle/Resources/public/js/slider.js'
+    output='bundles/footballnews/js/*' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
 {% block title %}Главная | Football 3x3{% endblock %}
 
 {% block content %}
     <div class="slider">
         <div class="slides">
             <ul>
-                <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
-                </li>
                 <li class="active">
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
+                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/%D0%90%D1%84%D0%B8%D1%88%D0%B0.jpg" width="100" height="75" />
+                    <b class="small-caption">Перший чемпіонат Києва з футболу 3х3 / 09.02.2012</b>
                 </li>
                 <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
+                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/x_fd85d5ae.jpg" width="100" height="75" />
+                    <b class="small-caption">Kyiv Urban Football Fest 2011 / 01.11.2011</b>
                 </li>
                 <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
+                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/media-igry-516.jpg" width="100" height="75" />
+                    <b class="small-caption">Перший жіночий кубок з футболу 3х3 «Медіа-ігри» 2011 / 05.11.2011</b>
                 </li>
                 <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
+                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/IMG_10423.jpg" width="100" height="75" />
+                    <b class="small-caption">Асоціація дитячого та молодіжного футболу 3х3 взяла участь у відкритті компоненту всеукраїнського соціального проекту «Давай разом!» – «Чесна гра!» / 03.11.2011</b>
                 </li>
                 <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
-                </li>
-                <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
-                </li>
-                <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
-                </li>
-                <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
-                </li>
-                <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
-                </li>
-                <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
-                </li>
-                <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
-                </li>
-                <li>
-                    <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
-                    <b>Junior Football Cup 3×3 (07.04.2010)</b>
-                    <br /><span>Some description</span>
+                    <img class="small-img" src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" width="100" height="75" />
+                    <b class="small-caption">Junior Football Cup 3×3 2010 / 07.04.2010</b>
                 </li>
             </ul>
         </div>
-        <div class="slide">
-            <img src="http://football3x3.kiev.ua/wp-content/uploads/2011/12/DSC_0148.jpg" height="400" width="650" />
-            <span class="slide-caption">Junior Football Cup 3×3 (07.04.2010)</span>
+        <div class="big-slide">
+            <img class="big-img" height="400" width="650" />
+            <span class="big-caption"></span>
         </div>
     </div>
 
