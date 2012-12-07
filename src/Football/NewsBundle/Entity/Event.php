@@ -42,6 +42,13 @@ class Event
      */
     private $description;
 
+	/**
+	 * @var integer
+	 *
+	 * @ORM\Column(name="order", type="integer", length=3)
+	 */
+	private $order;
+
 
     /**
      * Get id
@@ -120,5 +127,28 @@ class Event
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set order
+     *
+     * @param integer $order
+     * @return Event
+     */
+    public function setOrder($order)
+    {
+        $this->order = $order;
+    
+        return $this;
+    }
+
+    /**
+     * Get order
+     *
+     * @return integer 
+     */
+    public function getOrder()
+    {
+        return $this->order;
     }
 }
