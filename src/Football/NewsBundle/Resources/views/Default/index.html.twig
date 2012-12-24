@@ -3,10 +3,16 @@
 {% block javascripts %}
     {% javascripts
     '@FootballNewsBundle/Resources/public/js/jquery-1.8.3.min.js'
+    '@FootballNewsBundle/Resources/public/js/jquery.hashchange.min.js'
     '@FootballNewsBundle/Resources/public/js/slider.js'
+    '@FootballNewsBundle/Resources/public/js/jquery.easytabs.min.js'
     output='bundles/footballnews/js/*' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
+
+    <script type="text/javascript">
+        $('#tab-container').easytabs();
+    </script>
 {% endblock %}
 
 {% block title %}Главная | Football 3x3{% endblock %}
@@ -26,6 +32,26 @@
         <div class="big-slide">
             <img class="big-img" height="400" width="650" />
             <span class="big-caption"></span>
+        </div>
+    </div>
+
+    <div id="tab-container" class="tab-container">
+        <ul class="etabs">
+            <li class="tab"><a href="#tabs1-html">HTML Markup</a></li>
+            <li class="tab"><a href="#tabs1-js">Required JS</a></li>
+            <li class="tab"><a href="#tabs1-css">Example CSS</a></li>
+        </ul>
+        <div class="content" id="tabs1-html">
+            <h2>HTML Markup for these tabs</h2>
+            <!-- content -->
+        </div>
+        <div class="content" id="tabs1-js">
+            <h2>JS for these tabs</h2>
+            <!-- content -->
+        </div>
+        <div class="content" id="tabs1-css">
+            <h2>CSS Styles for these tabs</h2>
+            <!-- content -->
         </div>
     </div>
 {% endblock %}

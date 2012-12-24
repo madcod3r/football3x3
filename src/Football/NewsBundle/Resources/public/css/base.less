@@ -261,6 +261,60 @@ ul.navigation {
   }
 }
 
+.tab-container {
+  @tab-bg: #999;
+  @tab-bg-active: #418ac9;
+  @link-color: #fff;
+
+  margin-top: 10px;
+
+  .etabs {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tab {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    background: @tab-bg;
+    .gradient(@tab-bg, darken(@tab-bg, 10%));
+    .border-radius(2px 2px 0 0);
+
+    position: relative;
+    top: 1px;
+
+    a {
+      font-size: 14px;
+      line-height: 2em;
+      display: block;
+      padding: 0 10px;
+      outline: none;
+      color: @link-color;
+      text-decoration: none;
+
+      &:hover {
+      }
+
+      &.active {
+        padding-top: 1px;
+        padding-bottom: 1px;
+      }
+    }
+
+    &.active {
+      background: @tab-bg-active;
+      .gradient(@tab-bg-active, darken(@tab-bg-active, 10%));
+    }
+  }
+
+  .content {
+    border: 1px solid darken(@tab-bg, 10%);
+    .border-radius(0 2px 2px 2px);
+    padding: 10px;
+  }
+}
+
 /* sidebar */
 
 #sidebar {
