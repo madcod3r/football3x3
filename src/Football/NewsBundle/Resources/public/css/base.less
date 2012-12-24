@@ -38,6 +38,39 @@ a {
   margin-left: 10px;
 }
 
+.clear {
+  overflow: hidden;
+}
+
+.row {
+  margin-top: 10px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.block {
+  @block-bg: #418ac9;
+  color: #fff;
+  padding: 5px 10px;
+  width: 454px;
+  .border-radius(2px);
+  background: @block-bg;
+  .gradient(@block-bg, darken(@block-bg, 10%));
+
+  .heading {
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+    font-weight: normal;
+  }
+}
+
 table.table {
   width: 100%;
   border-collapse: collapse;
@@ -333,6 +366,14 @@ ul.navigation {
     border: 1px solid darken(@tab-bg, 10%);
     .border-radius(0 2px 2px 2px);
     padding: 10px;
+  }
+}
+
+table.partners {
+  width: 100%;
+
+  td {
+    padding: 5px;
   }
 }
 
