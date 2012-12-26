@@ -6,12 +6,22 @@
     '@FootballNewsBundle/Resources/public/js/jquery.hashchange.min.js'
     '@FootballNewsBundle/Resources/public/js/slider.js'
     '@FootballNewsBundle/Resources/public/js/jquery.easytabs.min.js'
+    '@FootballNewsBundle/Resources/public/js/grayscale.js'
     output='bundles/footballnews/js/*' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
     <script type="text/javascript">
         $('#tab-container').easytabs();
+
+        var $grayScale = $('.grayScale');
+        grayscale.prepare( $grayScale );
+        grayscale( $grayScale );
+        $grayScale.hover(function() {
+            grayscale.reset( $(this) );
+        }, function() {
+            grayscale( $(this) );
+        });
     </script>
 {% endblock %}
 
@@ -112,18 +122,18 @@
     <table class="partners">
         <tbody>
         <tr>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/derjavna-slujba-molodi-ta-sportu-ukrainy.jpg') }}" /></td>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/umbro.jpg') }}" /></td>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/sport-for-all.jpg') }}" /></td>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/junour-bank.jpg') }}" /></td>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/epicenter.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/derjavna-slujba-molodi-ta-sportu-ukrainy.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/umbro.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/sport-for-all.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/junour-bank.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/epicenter.jpg') }}" /></td>
         </tr>
         <tr>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/pershiy-natsionalniy.jpg') }}" /></td>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/ukr-freestyle.jpg') }}" /></td>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/istvo.jpg') }}" /></td>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/ukrainochka.jpg') }}" /></td>
-            <td><img src="{{ asset('bundles/footballnews/images/partners/corporate-league.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/pershiy-natsionalniy.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/ukr-freestyle.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/istvo.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/ukrainochka.jpg') }}" /></td>
+            <td><img class="grayScale" src="{{ asset('bundles/footballnews/images/partners/corporate-league.jpg') }}" /></td>
         </tr>
         </tbody>
     </table>
