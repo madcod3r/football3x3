@@ -2,6 +2,7 @@
 
 namespace Football\NewsBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -24,7 +25,8 @@ class League
     /**
      * @var string
      *
-     * @ORM\Column(name="slug", type="string", length=255)
+     * @Gedmo\Slug(fields={"short_name"})
+     * @ORM\Column(name="slug", type="string", length=128, unique=true)
      */
     private $slug;
 
