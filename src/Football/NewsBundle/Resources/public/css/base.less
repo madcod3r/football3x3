@@ -316,9 +316,12 @@ ul.navigation {
 }
 
 .tab-container {
-  @tab-bg: #999;
+  @tab-bg: #eaeaea;
   @tab-bg-active: #418ac9;
-  @link-color: #fff;
+  @link-color: #666;
+  @link-color-active: #fff;
+  @border-color: #ccc;
+  @border-color-active: #888;
 
   margin-top: 10px;
 
@@ -332,7 +335,8 @@ ul.navigation {
     zoom: 1;
     *display: inline;
     background: @tab-bg;
-    .gradient(@tab-bg, darken(@tab-bg, 10%));
+    border: 1px solid @border-color;
+    border-bottom: 0;
     .border-radius(2px 2px 0 0);
 
     position: relative;
@@ -346,24 +350,28 @@ ul.navigation {
       outline: none;
       color: @link-color;
       text-decoration: none;
+      padding-bottom: 1px;
 
       &:hover {
       }
 
       &.active {
-        padding-top: 1px;
+        color: @link-color-active;
+        padding-top: 2px;
         padding-bottom: 1px;
+        border-bottom: 1px solid @border-color-active;
       }
     }
 
     &.active {
+      border: 0;
       background: @tab-bg-active;
       .gradient(@tab-bg-active, darken(@tab-bg-active, 10%));
     }
   }
 
   .content {
-    border: 1px solid darken(@tab-bg, 10%);
+    border: 1px solid @border-color-active;
     .border-radius(0 2px 2px 2px);
     padding: 10px;
   }
