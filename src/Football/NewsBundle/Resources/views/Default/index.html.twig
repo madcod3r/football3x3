@@ -49,14 +49,13 @@
 
     <div id="tab-container" class="tab-container">
         <ul class="etabs">
-            <li class="tab"><a href="#tab-jfl-3x3-8-9">JFL 3x3 (8-9)</a></li>
-            <li class="tab"><a href="#tab-jfl-3x3-10-11">JFL 3x3 (10-11)</a></li>
-            <li class="tab"><a href="#tab-jfl-3x3-12-14">JFL 3x3 (12-14)</a></li>
-            <li class="tab"><a href="#tab-jfl-3x3-15-17">JFL 3x3 (15-17)</a></li>
-            <li class="tab"><a href="#tab-sfl-3x3-18-23">SFL 3x3 (18-23)</a></li>
+            {% for league in leagues %}
+                <li class="tab"><a href="#tab-{{ league.slug }}">{{ league.shortName }}</a></li>
+            {% endfor %}
         </ul>
-        <div class="content" id="tab-jfl-3x3-8-9">
-            <h3>Junior Football League 3x3 (8-9)</h3>
+        {% for league in leagues %}
+        <div class="content" id="tab-{{ league.slug }}">
+            <h3>{{ league.name }}</h3>
             <table class="table">
                 <tbody>
                 <tr>
@@ -78,18 +77,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="content" id="tab-jfl-3x3-10-11">
-            <h3>Junior Football League 3x3 (10-11)</h3>
-        </div>
-        <div class="content" id="tab-jfl-3x3-12-14">
-            <h3>Junior Football League 3x3 (12-14)</h3>
-        </div>
-        <div class="content" id="tab-jfl-3x3-15-17">
-            <h3>Junior Football League 3x3 (15-17)</h3>
-        </div>
-        <div class="content" id="tab-sfl-3x3-18-23">
-            <h3>Student Football League 3x3 (18-23)</h3>
-        </div>
+        {% endfor %}
     </div>
 
     <div class="row clear">
