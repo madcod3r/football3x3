@@ -21,7 +21,15 @@
         "sensio/generator-bundle": "2.1.*",
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
-        "leafo/lessphp": "dev-master"
+        "leafo/lessphp": "dev-master",
+        "sonata-project/easy-extends-bundle" : "dev-master",
+        "sonata-project/cache-bundle": "dev-master",
+        "sonata-project/jquery-bundle": "dev-master",
+        "sonata-project/exporter": "dev-master",
+        "sonata-project/block-bundle": "dev-master",
+        "sonata-project/user-bundle": "dev-master",
+        "sonata-project/admin-bundle": "dev-master",
+        "sonata-project/doctrine-orm-admin-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
