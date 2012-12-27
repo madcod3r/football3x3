@@ -2,6 +2,11 @@ parameters:
 #    football_news.example.class: Football\NewsBundle\Example
 
 services:
+    football_news.admin.event:
+        class: Football\NewsBundle\Admin\EventAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Events, label: Event }
+        arguments: [null, Football\NewsBundle\Entity\Event, SonataAdminBundle:CRUD]
 #    football_news.example:
 #        class: %football_news.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
