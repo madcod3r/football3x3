@@ -28,6 +28,7 @@
 {% block title %}Главная | Football 3x3{% endblock %}
 
 {% block content %}
+    {% if events %}
     <div class="slider">
         <div class="slides">
             <ul>
@@ -44,7 +45,9 @@
             <span class="big-caption"></span>
         </div>
     </div>
+    {% endif %}
 
+    {% if leagues %}
     <h2>Кращі команди<span class="alt-heading">(Сезон / зима 2012)</span></h2>
 
     <div id="tab-container" class="tab-container">
@@ -79,6 +82,7 @@
         </div>
         {% endfor %}
     </div>
+    {% endif %}
 
     <div class="row clear">
         <div class="block left">
