@@ -7,6 +7,8 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Events, label: Event }
         arguments: [null, Football\NewsBundle\Entity\Event, SonataAdminBundle:CRUD]
-#    football_news.example:
-#        class: %football_news.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    football_news.admin.league:
+        class: Football\NewsBundle\Admin\LeagueAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Leagues, label: League }
+        arguments: [null, Football\NewsBundle\Entity\League, SonataAdminBundle:CRUD]
