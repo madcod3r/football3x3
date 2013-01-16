@@ -57,6 +57,7 @@ doctrine:
                     ApplicationSonataUserBundle: ~
                     FOSUserBundle: ~
                     SonataMediaBundle: ~
+                    ApplicationSonataMediaBundle: ~
                     gedmo_translatable:
                         type: annotation
                         prefix: Gedmo\Translatable\Entity
