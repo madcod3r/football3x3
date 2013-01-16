@@ -137,12 +137,12 @@ sonata_media:
                 - sonata.media.provider.file
 
             formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 500 , quality: 70}
+                small: { width: 100, quality: 70 }
+                big:   { width: 650, quality: 100 }
 
     cdn:
         server:
-            path: /uploads/media # http://media.sonata-project.org/
+            path: http://94.74.83.62/football3x3/uploads/media # http://media.sonata-project.org/
 
     filesystem:
         local:
