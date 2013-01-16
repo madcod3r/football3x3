@@ -109,16 +109,33 @@ sonata_block:
         sonata.block.service.rss:
 
 sonata_admin:
+    security:
+        handler: sonata.admin.security.handler.role
+
     title:      Football3x3 Admin Panel
+    title_logo: /bundles/sonataadmin/logo_title.png
     templates:
         ## default global templates
         layout:  SonataAdminBundle::standard_layout.html.twig
         ajax:    SonataAdminBundle::ajax_layout.html.twig
+        dashboard: SonataAdminBundle:Core:dashboard.html.twig
+        short_object_description: SonataAdminBundle:Helper:short-object-description.html.twig
+        list_block: SonataAdminBundle:Block:block_admin_list.html.twig
 
         ## default actions templates, should extend a global templates
         list:    SonataAdminBundle:CRUD:list.html.twig
         show:    SonataAdminBundle:CRUD:show.html.twig
         edit:    SonataAdminBundle:CRUD:edit.html.twig
+        history: SonataAdminBundle:CRUD:history.html.twig
+        preview: SonataAdminBundle:CRUD:preview.html.twig
+        delete:  SonataAdminBundle:CRUD:delete.html.twig
+
+    dashboard:
+        blocks:
+            # display a dashboard block
+            #- { position: left, type: sonata.admin.block.admin_list }
+            - { position: left,  type: sonata.admin.block.admin_list, settings: { groups: [Events] } }
+
 
 fos_user:
     db_driver: orm
