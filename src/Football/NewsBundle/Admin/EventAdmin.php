@@ -44,7 +44,7 @@ class EventAdmin extends Admin
   {
     $formMapper
       ->add('name')
-      ->add('image', 'file')
+      ->add('image', 'sonata_type_model')
       ->add('description')
       ->add('order')
     ;
