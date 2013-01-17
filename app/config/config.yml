@@ -57,6 +57,7 @@ doctrine:
                 mappings:
                     FootballNewsBundle: ~
                     ApplicationSonataUserBundle: ~
+                    SonataUserBundle: ~
                     FOSUserBundle: ~
                     SonataMediaBundle: ~
                     ApplicationSonataMediaBundle: ~
@@ -136,6 +137,10 @@ sonata_admin:
             #- { position: left, type: sonata.admin.block.admin_list }
             - { position: left,  type: sonata.admin.block.admin_list, settings: { groups: [Events] } }
 
+sonata_intl:
+    timezone:
+        # default timezone used as fallback
+        default: Europe/Kiev
 
 fos_user:
     db_driver: orm
