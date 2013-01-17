@@ -20,6 +20,12 @@ class LeagueAdmin extends Admin
             ->add('short_name')
             ->add('name')
             ->add('order')
+            ->add('_action', 'actions', array(
+            'actions' => array(
+                'edit' => array(),
+                'delete' => array()
+            )
+        ))
         ;
     }
 
@@ -43,7 +49,6 @@ class LeagueAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-//            ->add('slug')
             ->add('short_name')
             ->add('name')
             ->add('order')

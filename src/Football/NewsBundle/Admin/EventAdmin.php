@@ -10,43 +10,49 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class EventAdmin extends Admin
 {
-  /**
-   * {@inheritdoc}
-   */
-  protected function configureListFields(ListMapper $listMapper)
-  {
-    $listMapper
-      ->add('name')
-      ->add('image')
-      ->add('description')
-      ->add('order')
-    ;
-  }
+    /**
+     * {@inheritdoc}
+     */
+    protected function configureListFields(ListMapper $listMapper)
+    {
+        $listMapper
+            ->add('name')
+            ->add('image')
+            ->add('description')
+            ->add('order')
+            ->add('_action', 'actions', array(
+            'actions' => array(
+                'edit' => array(),
+                'delete' => array()
+            )
+        ))
+        ;
+    }
 
-  /**
-   * {@inheritdoc}
-   */
-  protected function configureDatagridFilters(DatagridMapper $filterMapper)
-  {
-    $filterMapper
-      ->add('id')
-      ->add('name')
-      ->add('image')
-      ->add('description')
-      ->add('order')
-    ;
-  }
+    /**
+     * {@inheritdoc}
+     */
+    protected function configureDatagridFilters(DatagridMapper $filterMapper)
+    {
+        $filterMapper
+            ->add('id')
+            ->add('name')
+            ->add('image')
+            ->add('description')
+            ->add('order')
+        ;
+    }
 
-  /**
-   * {@inheritdoc}
-   */
-  protected function configureFormFields(FormMapper $formMapper)
-  {
-    $formMapper
-      ->add('name')
-      ->add('image', 'sonata_type_model')
-      ->add('description')
-      ->add('order')
-    ;
-  }
+    /**
+     * {@inheritdoc}
+     */
+    protected function configureFormFields(FormMapper $formMapper)
+    {
+        $formMapper
+            ->add('name')
+            ->add('image', 'sonata_type_model')
+            ->add('description')
+            ->add('order')
+        ;
+    }
 }
