@@ -7,8 +7,15 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Events, label: Event }
         arguments: [null, Football\NewsBundle\Entity\Event, SonataAdminBundle:CRUD]
+
     football_news.admin.league:
         class: Football\NewsBundle\Admin\LeagueAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: Leagues, label: League }
+            - { name: sonata.admin, manager_type: orm, group: Teams, label: League }
         arguments: [null, Football\NewsBundle\Entity\League, SonataAdminBundle:CRUD]
+
+    football_news.admin.team:
+        class: Football\NewsBundle\Admin\TeamAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Teams, label: Team }
+        arguments: [null, Football\NewsBundle\Entity\Team, SonataAdminBundle:CRUD]
