@@ -152,4 +152,9 @@ class League
     {
         return $this->order;
     }
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }
