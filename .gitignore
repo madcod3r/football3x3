@@ -6,6 +6,7 @@
 
 # Symfony files to ignore
 /web/bundles/
+/web/uploads/
 /app/bootstrap*
 /app/cache/*
 /app/logs/*
