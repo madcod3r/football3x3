@@ -3,6 +3,9 @@ $(function() {
     var $big_slide = $('.big-slide', $slider);
     $('.slides ul li', $slider).each(function(i, slide) {
         $(slide).bind('click', function() {
+
+            if ($(this).hasClass('active')) return false;
+
             var img_src = $('img.small-img', this).attr('src');
             var caption = $('.small-caption', this).html();
 
@@ -17,6 +20,8 @@ $(function() {
             // set slide as active
             $('.slides ul li', $slider).removeClass('active');
             $(this).addClass('active');
+
+            return false;
         });
     });
     $('.slides ul li:first-child', $slider).click();

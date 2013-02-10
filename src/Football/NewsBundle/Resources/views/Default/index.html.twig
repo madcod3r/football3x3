@@ -33,7 +33,7 @@
         <div class="slides">
             <ul>
                 {% for event in events %}
-                <li class="active">
+                <li>
                     <img class="small-img" src="{% path event.image, 'big' %}" width="100" height="75" />
                     <b class="small-caption">{{ event.name }}</b>
                 </li>
