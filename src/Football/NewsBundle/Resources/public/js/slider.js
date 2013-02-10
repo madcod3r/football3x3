@@ -11,7 +11,7 @@ $(function() {
             });
 
             $('.big-caption', $big_slide).stop().animate({ opacity: '0.3' }, function(){
-                $(this).html(caption).stop().animate({ opacity: '0.8' });
+                $(this).html(caption).stop().animate({ opacity: '0.9' });
             });
 
             // set slide as active
