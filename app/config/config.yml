@@ -164,7 +164,7 @@ sonata_media:
 
     cdn:
         server:
-            path: http://94.74.83.62/football3x3/uploads/media # http://media.sonata-project.org/
+            path: /uploads/media # http://media.sonata-project.org/
 
     filesystem:
         local:
