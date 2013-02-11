@@ -44,13 +44,6 @@ class Event
     private $description;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="`order`", type="integer", length=3)
-     */
-    private $order;
-
-    /**
      * @var datetime $created
      *
      * @Gedmo\Timestampable(on="create")

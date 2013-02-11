@@ -19,7 +19,6 @@ class EventAdmin extends Admin
             ->add('name')
             ->add('image')
             ->add('description')
-            ->add('order')
             ->add('_action', 'actions', array(
             'actions' => array(
                 'edit' => array(),
@@ -39,7 +38,6 @@ class EventAdmin extends Admin
             ->add('name')
             ->add('image')
             ->add('description')
-            ->add('order')
         ;
     }
 
@@ -52,7 +50,6 @@ class EventAdmin extends Admin
             ->add('name')
             ->add('image', 'sonata_type_model')
             ->add('description', 'ckeditor')
-            ->add('order')
         ;
     }
 }
