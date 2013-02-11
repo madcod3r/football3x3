@@ -18,7 +18,6 @@ class EventAdmin extends Admin
         $listMapper
             ->add('name')
             ->add('image')
-            ->add('description')
             ->add('_action', 'actions', array(
             'actions' => array(
                 'edit' => array(),
